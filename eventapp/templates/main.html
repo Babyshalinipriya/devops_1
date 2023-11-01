@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("https://www.fruitbowldigital.com/wp-content/uploads/2016/10/111111111-1080x675.png");
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-left: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Event Registration</h1>
+        <form action="registration_process.php" method="post">
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Time</th>
+                    <th>Register</th>
+                </tr>
+                <tr>
+                    <td>Event 1</td>
+                    <td>10:00 AM - 11:30 AM</td>
+                    <td><input type="checkbox" id="event1" name="events[]" value="Event 1"></td>
+                </tr>
+                <tr>
+                    <td>Event 2</td>
+                    <td>1:00 PM - 2:30 PM</td>
+                    <td><input type="checkbox" id="event2" name="events[]" value="Event 2"></td>
+                </tr>
+                <tr>
+                    <td>Event 3</td>
+                    <td>3:00 PM - 4:30 PM</td>
+                    <td><input type="checkbox" id="event3" name="events[]" value="Event 3"></td>
+                </tr>
+            </table>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
